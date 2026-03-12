@@ -3,37 +3,40 @@
 ## Paper Title
 Sample-Specific Prompting (SSP)
 
-## Algorithm Name
-SSP
+## Problem
+Large language models can produce answers that sound correct but are factually wrong. This problem is called hallucination.
 
 ## Main Idea
-SSP detects hallucinations by adding a sample-specific noise prompt to the answer and checking how the model’s intermediate representations change.
+SSP detects hallucination by adding a sample-specific noise prompt to the original question-answer pair and measuring how much the model’s internal representations change.
 
-## Input
-- Question
-- Generated answer
-
-## Output
-- Hallucination / truthfulness score
-
-## Main Components
-- Noise prompt generator
+## Key Components
+- Question-answer pair
+- Sample-specific noise prompt generator
 - Shared LLM backbone
 - Encoder
-- Discrepancy function
+- Discrepancy score
 
-## Basic Working
-1. Create a perturbation prompt for the sample.
-2. Append it to the answer.
-3. Run original and perturbed inputs through the same model.
-4. Compare the internal representations.
-5. Use the difference to detect hallucination.
+## Algorithm Workflow
+1. Take a question and its generated answer.
+2. Generate an adaptive noise prompt for that sample.
+3. Append the noise prompt to create a perturbed input.
+4. Run both original and perturbed inputs through the same LLM.
+5. Extract intermediate representations.
+6. Encode the representations into a comparison space.
+7. Compute a discrepancy score.
+8. Use the score for hallucination detection.
 
-## Strength
-It uses internal representation change, not only output confidence.
+## Why SSP is Different
+Unlike static prompting methods, SSP creates a different perturbation for each sample. It also uses representation shifts instead of relying only on output confidence.
 
-## Weakness
-The method looks more complex than simple prompting methods and may be harder to reproduce fully.
+## Strengths
+- Uses intermediate representations
+- Sample-specific prompting
+- Better hallucination detection performance than several baselines
 
-## Notes
-This file is part of my paper review repository.
+## Weaknesses
+- Hard to reproduce fully without exact training setup
+- Requires access to internal representations
+
+## My Implementation Note
+The code in this repository is a simplified educational implementation inspired by the SSP idea, not a full reproduction of the original paper.

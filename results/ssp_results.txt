@@ -1,1 +1,16 @@
-SSP results will be added after implementation and testing.
+SSP Simplified Demo Result
+
+Algorithm:
+Sample-Specific Prompting (SSP)
+
+Main Idea:
+Use a sample-specific noise prompt to perturb the input and compare representation shifts.
+
+Repository Status:
+- PDF uploaded
+- Pseudocode written
+- Review written
+- Simplified implementation added
+
+Note:
+This repository contains a simplified educational version inspired by the SSP paper, not the full original training pipeline.

@@ -38,8 +38,8 @@ Unlike static prompting methods, SSP creates a different perturbation for each s
 - Hard to reproduce fully without exact training setup
 - Requires access to internal representations
 
-## Reported Performance in Paper
-The paper reports that SSP outperforms multiple baselines on hallucination detection benchmarks and achieves strong AUROC results across datasets.
-
 ## My Implementation Note
 The code in this repository is a simplified educational implementation inspired by the SSP idea, not a full reproduction of the original paper.
+
+## Reported Performance in Paper
+The paper reports that SSP outperforms multiple baselines on hallucination detection benchmarks and achieves strong AUROC results across datasets.

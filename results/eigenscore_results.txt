@@ -1,0 +1,35 @@
+Sample EigenScore Run
+
+Question:
+Who invented the telephone?
+
+Generated Responses:
+1. Alexander Graham Bell invented the telephone.
+2. The telephone is generally credited to Alexander Graham Bell.
+3. Alexander Graham Bell is widely known as the inventor of the telephone.
+4. Some people associate the invention of the telephone with Bell.
+
+EigenScore:
+-3.2841
+
+Interpretation:
+Low diversity across embeddings.
+Likely lower hallucination risk.
+
+--------------------------------------------------
+
+Question:
+Who was the president of the Moon in 1965?
+
+Generated Responses:
+1. The president of the Moon in 1965 was John Kellar.
+2. Moon leadership in 1965 was handled by a lunar governor.
+3. There was a president named Alton Reed on the Moon in 1965.
+4. The Moon had no official president, but some records mention a space administrator.
+
+EigenScore:
+0.9127
+
+Interpretation:
+High diversity across embeddings.
+Likely higher hallucination risk.
